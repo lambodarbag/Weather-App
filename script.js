@@ -70,7 +70,6 @@ function renderUI(data) {
         body.style.backgroundRepeat = "no-repeat";
         break;
       }
-
       body.style.backgroundImage = "url('assets/clear.jpg')";
       body.style.backgroundSize = "cover";
       body.style.backgroundPosition = "bottom";
@@ -107,7 +106,16 @@ function renderUI(data) {
       body.style.backgroundPosition = "center";
       body.style.backgroundRepeat = "no-repeat";
       break;
+
+    default:
+      body.style.backgroundImage = "url('assets/default.jpg')";
+      body.style.backgroundSize = "cover";
+      body.style.backgroundPosition = "center";
+      body.style.backgroundRepeat = "no-repeat";
+      body.style.backgroundPosition = "bottom";
+      break;
   }
+
 
   temperature.textContent = `${Math.round(weatherData.main.temp)}°C`;
 
